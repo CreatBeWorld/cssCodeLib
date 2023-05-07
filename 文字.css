@@ -1,0 +1,33 @@
+/* 该文件用于处理与文字有关的样式 */
+
+/* 单行文字溢出 显示'...' */
+.singleLine-overflow {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* 多行文字溢出 显示'...' */
+/*  
+  如果要设置文字水平垂直居中，则多行文字需要用标签包裹，且需要给父元素设置如下样式
+  .parent{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height: 40px;
+  }
+*/
+.multiLine-overflow {
+  /* 需要设置高度，如果需要垂直居中，则不设置高度，在父元素上设置高度 */
+  min-height: 40px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  /* 显示几行 */
+  -webkit-line-clamp: 2; 
+  /* 文字垂直显示 */
+  -webkit-box-orient: vertical;
+  /* word-break规定换行的处理方法 break-all:允许在单词内换行 */
+  word-break: break-all;
+}
+
