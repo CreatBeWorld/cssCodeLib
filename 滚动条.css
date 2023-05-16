@@ -1,3 +1,7 @@
+/* ::-webkit-scrollbar 仅在基于 Blink 或 WebKit 的浏览器
+（例如，Chrome、Edge、Opera、Safari、iOS 上所有的浏览器，以及其他基于 WebKit 的浏览器）
+上可用 
+*/
 /* 滚动条选择器: 选中整个滚动条 */
 ::-webkit-scrollbar{
   width: 10px;
